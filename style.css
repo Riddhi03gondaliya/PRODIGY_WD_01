@@ -1,0 +1,283 @@
+/* @import url("https://fonts.googleapis.com/ass2?family=Jost:wght@400;700&display=swap"); */
+
+body{
+    margin:0;
+    padding: 0;
+    height: 2000px;
+    font-family: monospace;
+}
+
+.navbar{
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237,0.37);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+
+}
+.navbar a{
+    color: aliceblue;
+}
+
+nav ul{
+    display: flex;
+    text-decoration: none;
+    margin: 0;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    color: black;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.navbar-color{
+    background: skyblue;
+    width: 100%;
+}
+.carousel-caption h2,
+.carousel-caption h1 {
+  font-size: 2rem; /* Adjust font size for both headings (e.g., 3rem for larger) */
+  color: white; /* Adjust text color (e.g., #333 for dark gray) */
+  text-align: center; /* Center text within caption area (already handled by Bootstrap classes) */
+}
+.carousel-caption h1 {
+    font-size: 8rem; /* Adjust as needed */
+    font-weight: 700;
+}
+
+.overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #000;
+        opacity: .3; 
+}
+
+.card-img-top {
+    width: 100%;
+    height: 600px; /* Fixed height for the images */
+    object-fit: cover; /* Ensures the images cover the container */
+}
+
+.carousel-item {
+    height: 700px;
+  }
+  
+.carousel-item {
+     position: absolute;
+    object-fit: cover;
+    top: 0;
+     left: 0;  
+  }
+
+
+  *{
+    box-sizing: border-box;
+    font-family: 'Lato',sans-serif;
+  }
+
+   /* html,body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#222;
+  }  */
+ 
+  .wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    
+  }
+
+  .card{
+    width: 250px;
+    height: 250px;
+    padding: 2rem 1rem;
+    background: #fff;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+    
+  }
+
+  .card:hover{
+    transform: translateY(20px);
+  }
+
+  .card::before{
+    content: "";
+    position:absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(0,176,155,0.5),rgba(150,201,61,1));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+  }
+
+.card:hover:before{
+    opacity: 1;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.card .info{
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s all;
+}
+
+.card:hover .info{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.card .info p{
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 8px;
+    margin-bottom: 50px;
+}
+
+.card .info .btn{
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: #fff;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    cursor:pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.card .info .btn:hover{
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+}
+
+
+
+/* destinations */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Jost",sans-serif;
+}
+
+.slider-container{
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-images{
+    display: flex;
+    align-items: center;
+    gap: 21px;
+}
+
+.slider-images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.slider-img{
+    width: 110px;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.7s ease;
+}
+
+.slider-images .slider-img:first-child, .slider-images .slider-img:last-child{
+    height: 480px;
+}
+
+.slider-images .slider-img:nth-child(2), .slider-images .slider-img:nth-child(6){
+    height: 560px;
+}
+
+.slider-images .slider-img:nth-child(3), .slider-images .slider-img:nth-child(4), .slider-images .slider-img:nth-child(5){
+    height: 665px;
+}
+  
+
+.slider-img h1{
+    font-family: "Jost", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: -35%;
+    transform: rotate(270deg);
+    transform: 0.7s ease;
+}
+
+.details{
+    position: absolute;
+    bottom: 43px;
+    left: 43px;
+}
+
+.details p{
+    font-family: "Jost",sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 20px;
+    text-align: start;
+    color: white;
+    text-transform: lowercase;
+    transition: 0.4s ease;
+    display: none;
+}
+
+
+.slider-img.active{
+    width: 650px !important;
+    height: 650px !important; 
+}
+
+.slider-img.active h1{
+    display:none;
+}
+
+.slider-img.active .details p, .slider-img.active .details h2{
+    display: block;
+}
